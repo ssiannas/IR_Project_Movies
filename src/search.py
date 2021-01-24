@@ -19,7 +19,7 @@ class Search():
     def __str__(self):
         counter = 0
         for i in sorted(self.result.items(), key=lambda item: item[1], reverse=True):
-            print(i)
+            print("{}, Total Score: {}".format(i[0],i[1][0]))
             counter+=1
             if counter > cfg.print_no:
                 break

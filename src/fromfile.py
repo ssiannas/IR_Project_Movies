@@ -1,4 +1,4 @@
-from elasticsearch import helpers, Elasticsearch
+from elasticsearch import helpers
 import csv
 
 def csv_load(es, filename):
