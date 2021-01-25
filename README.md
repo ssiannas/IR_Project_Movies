@@ -20,12 +20,11 @@ Install [python](www.python.org) **Note: Tensorflow only works for versions <=3.
 Download the latest release and extract it in a directory
 ### 2.1 Set up the configuration file
 Open `src/cfg` and specify the configuration parameters
-<div>
-<img style="float: right;" src="https://i.imgur.com/WeQtUqi.png">
-</div>
 - Elasticsearch port and host
 - Limit on printed results
 - Mapping is a dictionary that maps genres to indices, leave it empty
+<img style="float: right;" src="https://i.imgur.com/WeQtUqi.png">
+
 
 ### 2.2 Run the program
 You can either run the program from an IDE or open a command line in the project folder and execute the command:
