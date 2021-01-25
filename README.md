@@ -1,7 +1,7 @@
 # IR Search Engine using Elasticsearch and Learning Methods
 ## 1. Installation
+Install [python](www.python.org) **Note: Tensorflow only works for versions <=3.8**
 ### 1.1 Install the following Python Modules
-- [python](www.python.org) **Note: Tensorflow only works for versions <=3.8**
 - [tensorflow](https://www.tensorflow.org/install/)
 - [keras](https://pypi.org/project/Keras/)
 - [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html)
