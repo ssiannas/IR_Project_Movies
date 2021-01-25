@@ -20,6 +20,7 @@ Install [python](www.python.org) **Note: Tensorflow only works for versions <=3.
 Download the latest release and extract it in a directory
 ### 2.1 Set up the configuration file
 <img align="right" src="https://i.imgur.com/WeQtUqi.png">
+
 Open `src/cfg` and specify the configuration parameters
 - Elasticsearch port and host
 - Limit on printed results
