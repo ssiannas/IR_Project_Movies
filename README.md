@@ -1,12 +1,13 @@
 # IR Search Engine using Elasticsearch and Learning Methods
 ## 1. Installation
-### 1.1 Python Modules
-- Install [python](www.python.org) **Note: Tensorflow only works for versions <=3.8**
-- Install [tensorflow](https://www.tensorflow.org/install/)
-- Install [keras](https://pypi.org/project/Keras/)
-- Install [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html)
-- Install [elasticsearch for python](https://pypi.org/project/elasticsearch/)
-- Install [sklearn](https://scikit-learn.org/stable/install.html)
+### 1.1 Install the following Python Modules
+- [python](www.python.org) **Note: Tensorflow only works for versions <=3.8**
+- [tensorflow](https://www.tensorflow.org/install/)
+- [keras](https://pypi.org/project/Keras/)
+- [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html)
+- [elasticsearch for python](https://pypi.org/project/elasticsearch/)
+- [sklearn](https://scikit-learn.org/stable/install.html)
+- [gensim](https://pypi.org/project/gensim/)
 
 ### 1.2 Elasticsearch
 - Download and extract [elasticsearch](https://www.elastic.co/downloads/elasticsearch) to your C:\ directory
