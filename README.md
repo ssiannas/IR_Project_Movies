@@ -23,7 +23,7 @@ Open `src/cfg` and specify the configuration parameters
 - Elasticsearch port and host
 - Limit on printed results
 - Mapping is a dictionary that maps genres to indices, leave it empty
-<img style="float: right;" src="https://i.imgur.com/WeQtUqi.png">
+<img align="right" src="https://i.imgur.com/WeQtUqi.png">
 
 
 ### 2.2 Run the program
