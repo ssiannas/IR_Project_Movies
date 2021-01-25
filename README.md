@@ -21,7 +21,7 @@ Download the latest release and extract it in a directory
 ### 2.1 Set up the configuration file
 Open `src/cfg` and specify the configuration parameters
 <div>
-<img style="float: right" src="https://i.imgur.com/WeQtUqi.png">
+<img style="float: right;" src="https://i.imgur.com/WeQtUqi.png">
 </div>
 - Elasticsearch port and host
 - Limit on printed results
