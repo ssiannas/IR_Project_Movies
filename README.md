@@ -11,7 +11,7 @@
 
 ### 1.2 Elasticsearch
 - Download and extract [elasticsearch](https://www.elastic.co/downloads/elasticsearch) to your C:\ directory
-- Open a command prompt in the directory C:\(elasticsearch folder name)\bin
+- Open a command prompt in the directory C:\\(elasticsearch folder name)\bin
 - Execute:
 
       elasticsearch.bat
