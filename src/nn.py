@@ -84,7 +84,7 @@ class NeuralNetwork():
         xnew = np.array([np.array(xnew)])
         xnew = tf.cast(xnew, tf.float32)
         score = np.argmax(self.__model.predict(xnew), axis=-1)
-        return score[0]/2.
+        return (score[0]+1)/2.
 
     def __savemodel(self):
         model_json = self.__model.to_json()
