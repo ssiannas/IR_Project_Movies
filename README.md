@@ -42,5 +42,5 @@ You can either run the program from an IDE or open a command line in the project
 
     python main.py
 
-You can follow the instructions from the console from now on!
+You can follow the instructions in the console from now on!
 ![ui](https://i.imgur.com/BOhpBXT.png)
