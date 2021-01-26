@@ -32,7 +32,8 @@ Open `src/cfg` and specify the configuration parameters
 - Mapping is a dictionary that maps genres to indices, leave it empty
 
 
-
+### 2.2 Elasticsearch
+Make sure elasticsearch is running in the background (follow the method in [paragraph 1.2](#1.2-Elasticsearch))
 ### 2.2 Run the program
 You can either run the program from an IDE or open a command line in the project folder and execute the command:
 
