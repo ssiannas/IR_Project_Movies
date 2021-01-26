@@ -41,6 +41,7 @@ class Search():
             size, xtrain, ytrain, ylabels = self.__nn.setupdata()
             self.__nn.train(xtrain,ytrain,ylabels,size)
 
+
     def query(self,title,*userid):
         if not len(userid):
             self.result = self.__search(title)
@@ -139,8 +140,8 @@ class Search():
                             cat_count += 1
 
                     if self.__nn_enabled:
-                        predicted_user_score*=0.7
-                        predicted_user_score += 0.3*self.__nn.predict(my_user_id,tit,movie_categories)
+                        predicted_user_score*=0.5
+                        predicted_user_score += 0.5*self.__nn.predict(my_user_id,tit,movie_categories)
 
                     if predicted_user_score > 0:
                         predicted_user_score /= cat_count
@@ -150,6 +151,7 @@ class Search():
                 elif self.__nn_enabled:
                     predicted_nn_score = self.__nn.predict(my_user_id,tit,movie_categories)
                     score += predicted_nn_score
+                    print(predicted_nn_score)
                     coef += 1
 
 
