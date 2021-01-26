@@ -14,8 +14,8 @@ Install [python](www.python.org) **Note: Tensorflow only works for versions <=3.
 - [gensim](https://pypi.org/project/gensim/)
 
 ### 1.2 Elasticsearch
-- Download and extract [elasticsearch](https://www.elastic.co/downloads/elasticsearch) to your C:\ directory
-- Open a command prompt in the directory C:\\(elasticsearch folder name)\bin
+- Download and extract [elasticsearch](https://www.elastic.co/downloads/elasticsearch) to your `C:\` directory
+- Open a command prompt in the directory `C:\\(elasticsearch folder name)\bin`
 - Execute:
 
       elasticsearch.bat
