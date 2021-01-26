@@ -1,4 +1,4 @@
-# IR Search Engine using Elasticsearch and Learning Methods
+# Movie Search Engine using Elasticsearch and Machine Learning Methods
 ## About
 Information retrieval project that utilizes elasticsearch, supervised and unsupervised machine learning to retrieve search results based on user movie ratings.
 
