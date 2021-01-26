@@ -2,7 +2,7 @@
 ## About
 Information retrieval project that utilizes elasticsearch, supervised and unsupervised machine learning to retrieve search results based on user movie ratings.
 
-Developped by: Siannas Spyros, Papanikolaou Athos
+*Developped by: Siannas Spyros, Papanikolaou Athos*
 
 ## 1. Installation
 Install [python](www.python.org) **Note: Tensorflow only works for versions <=3.8 (25/01/2021)**
