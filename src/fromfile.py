@@ -10,4 +10,3 @@ def csv_load(es, filename):
             print("\nRESPONSE:", response)
         except Exception as e:
             print("\nERROR:", e)
-
