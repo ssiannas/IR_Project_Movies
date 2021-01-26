@@ -1,6 +1,7 @@
 # IR Search Engine using Elasticsearch and Learning Methods
 ## About
 Information retrieval project that utilizes elasticsearch, supervised and unsupervised machine learning to retrieve search results based on user movie ratings.
+
 Developped by: Siannas Spyros, Papanikolaou Athos
 
 ## 1. Installation
