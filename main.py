@@ -1,4 +1,4 @@
-from src import search,nn
+from src import search
 import os
 
 def cls():
@@ -49,9 +49,6 @@ if __name__ == "__main__":
                 my_search.enable_nn()
                 my_search.query(title,userid)
                 print(my_search)
-            elif choice == 13:
-                my_search.enable_nn()
-
             elif choice == 0:
                 break
             input("Press Enter to continue...")
