@@ -151,7 +151,6 @@ class Search():
                 elif self.__nn_enabled:
                     predicted_nn_score = self.__nn.predict(my_user_id,tit,movie_categories)
                     score += predicted_nn_score
-                    print(predicted_nn_score)
                     coef += 1
 
 
