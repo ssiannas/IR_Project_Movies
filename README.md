@@ -34,7 +34,9 @@ Open `src/cfg` and specify the configuration parameters
 
 ### 2.2 Elasticsearch
 Make sure elasticsearch is running in the background (follow the method in paragraph [1.2 Elasticsearch](#12-elasticsearch))
-### 2.2 Run the program
+
+
+### 2.3 Run the program
 You can either run the program from an IDE or open a command line in the project folder and execute the command:
 
     python main.py
