@@ -117,8 +117,11 @@ class Search():
             cats[index] = cat.split('|')
         final = {}
         # Cases for the application
+        if self.__kmeans_enabled:
+            self.__my_clustering.set_user(my_user_id)
+            user_means = self.__my_clustering.predict_user()
 
-        # Case 1: No Clustering OR Neural Network
+
         for tit, movie_categories, elastic_score, mean_score, user_score in zip(hits.title, cats, hits.elastic_scores, hits.mean_score, hits.user_score):
             score = elastic_score
             coef = 1
@@ -130,30 +133,33 @@ class Search():
                 coef += 1
             else:
                 if self.__kmeans_enabled:
-                    user_means = self.__my_clustering.predict_user(my_user_id)
-                    cat_count = 0
+                    # Case 1: Clustering AND NO Neural Network
+                    cat_count = 1
                     predicted_user_score = 0
                     for categ in movie_categories:
                         if categ != '(no genres listed)':
                             k = user_means[cfg.mapping[categ]]
                             predicted_user_score += k
-                            cat_count += 1
-
-                    if self.__nn_enabled:
-                        predicted_user_score*=0.5
-                        predicted_user_score += 0.5*self.__nn.predict(my_user_id,tit,movie_categories)
+                        else:
+                            cat_count = 1 #Just being safe
 
                     if predicted_user_score > 0:
                         predicted_user_score /= cat_count
                         score += predicted_user_score
                         coef += 1
 
+                    if self.__nn_enabled:
+                        # Case 2: Clustering AND Neural Network
+                        predicted_user_score*=0.5
+                        predicted_user_score += 0.5*self.__nn.predict(my_user_id,tit,movie_categories)
+
                 elif self.__nn_enabled:
+                    # Case 3: NO Clustering AND Neural Network
                     predicted_nn_score = self.__nn.predict(my_user_id,tit,movie_categories)
                     score += predicted_nn_score
                     coef += 1
 
-
+            #Printing the coef allows to see which of the 3 metric parameters were used
             final[tit] = [score / coef, coef]
 
         return final

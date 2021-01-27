@@ -31,18 +31,21 @@ class Cluster():
         clustering.fit(data)
         self.__my_clustering = clustering
 
-
-    def predict_user(self, userId):
-        my_user_ratings = pd.DataFrame()
+    def set_user(self, userId):
+        self.my_user_ratings = pd.DataFrame()
         for genre in self.__genres:
             genre_movies = self.__movies[self.__movies['genres'].str.contains(genre)]
             avg_genre_votes_per_user = \
-                self.__ratings[self.__ratings['movieId'].isin(genre_movies['movieid'])].loc[self.__ratings['userId'] == userId].groupby(
+                self.__ratings[self.__ratings['movieId'].isin(genre_movies['movieid'])].loc[
+                    self.__ratings['userId'] == userId].groupby(
                     ['userId'])[
                     'rating'].mean()
-            my_user_ratings = pd.concat([my_user_ratings, avg_genre_votes_per_user], axis=1)
-        my_user_ratings = my_user_ratings.fillna(2.5)
-        user_values = my_user_ratings.values
-        res = self.__my_clustering.predict(user_values)
+            self.my_user_ratings = pd.concat([ self.my_user_ratings, avg_genre_votes_per_user], axis=1)
+        self.my_user_ratings =  self.my_user_ratings.fillna(2.5)
+        self.user_values = self.my_user_ratings.values
+
+    def predict_user(self):
+        self.user_values = self.my_user_ratings.values
+        res = self.__my_clustering.predict(self.user_values)
         my_result = self.__my_clustering.cluster_centers_[res]
         return my_result[0]

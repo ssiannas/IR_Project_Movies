@@ -66,7 +66,6 @@ class NeuralNetwork():
             tf.keras.layers.Dense(100, activation='relu'),
             tf.keras.layers.Dropout(0.15),
             tf.keras.layers.Dense(10, activation='softmax')
-            # tf.keras.layers.Dense(11, activation='sigmoid')
         ])
 
         model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
@@ -131,6 +130,8 @@ class NeuralNetwork():
         self.__model.fit(train_dataset, epochs=cfg.nn_epochs, verbose=1, batch_size=cfg.nn_batch_size,class_weight=class_weights)
         print("Training Complete! Saving model to \\models...")
         self.__savemodel()
+        self.__set_users()
+        self.__my_encoder = OneHotEncoder(sparse=False, handle_unknown='ignore', categories=self.__my_users)
 
     def __set_users(self):
         self.__movies = self.__movies.rename(columns={"movieid": "movieId"})
@@ -191,7 +192,6 @@ class NeuralNetwork():
 
         c = self.__onehot(c)
 
-        input()
         k = np.concatenate((a, b, c), axis=1)
 
         y = 2 * (target.values) - 1.
